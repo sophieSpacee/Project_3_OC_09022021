@@ -1,0 +1,12 @@
+button {
+    color: white;
+    font-family: "roboto";
+    box-shadow: 2px 5px 5px $color-shadow;
+    text-align: center;
+    font-size: 1.1em;
+    background: linear-gradient($color-secondary, $color-primary);
+    border-radius: 30px;
+    padding: 1em 1.5em 1em 1.5em;
+    border: none;
+    margin: 1em 0 1em 0;
+}

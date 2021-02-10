@@ -2,6 +2,11 @@
 @import "./Utils/fonctions";
 @import "./Utils/mixins";
 @import "./Utils/placeholders";
-@import "./Base/base";
-@import "./Base/";
-@import "./Base/";
+@import "./base";
+@import "./components";
+@import "./layout.scss";
+@import "./Pages/welcome.scss";
+@import "./Pages/menu-delice";
+@import "./Pages/menu-francaise.scss";
+@import "./Pages/menu-gout.scss";
+@import "./Pages/menu-note.scss";

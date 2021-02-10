@@ -1,17 +1,177 @@
-/* Error: Can't find stylesheet to import.
- *   ,
- * 6 | @import "./Base/";
- *   |         ^^^^^^^^^
- *   '
- *   sass/main.scss 6:9  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Can't find stylesheet to import.\a   \2577 \a 6 \2502  @import \"./Base/\";\a   \2502          ^^^^^^^^^\a   \2575 \a   sass/main.scss 6:9  root stylesheet";
+@font-face {
+  font-family: "roboto";
+  src: url("../font/Roboto/Roboto-Regular.ttf");
 }
+@font-face {
+  font-family: "roboto-thin";
+  src: url("../font/Roboto/Roboto-Thin.ttf");
+}
+@font-face {
+  font-family: "shrikhand";
+  src: url("../font/Shrikhand/Shrikhand-Regular.ttf");
+}
+@font-face {
+  font-family: "roboto-medium";
+  src: url("../font/roboto/Roboto-Medium.ttf");
+}
+@font-face {
+  font-family: "roboto-light";
+  src: url("../font/roboto/Roboto-Light.ttf");
+}
+header {
+  padding: 1em;
+  text-align: center;
+}
+
+body {
+  margin: 0;
+}
+
+button {
+  color: white;
+  font-family: "roboto";
+  box-shadow: 2px 5px 5px #EAEAEA;
+  text-align: center;
+  font-size: 1.1em;
+  background: linear-gradient(#FF79DA, #9356DC);
+  border-radius: 30px;
+  padding: 1em 1.5em 1em 1.5em;
+  border: none;
+  margin: 1em 0 1em 0;
+}
+
+.location {
+  text-align: center;
+  background-color: #EAEAEA;
+  height: 3em;
+  font-family: "roboto";
+  line-height: 3em;
+  color: #353535;
+  box-shadow: inset 0 7px 5px -5px #cfcfcf;
+}
+.location i {
+  padding-right: 0.5em;
+}
+
+h1 {
+  font-family: "roboto-medium";
+  font-size: 1.7em;
+  margin: 0.5em 0 0.5em 0;
+}
+
+.explore {
+  text-align: center;
+  padding: 2em;
+  background-color: #f6f6f6;
+}
+.explore p {
+  font-family: "roboto-thin";
+}
+
+.steps {
+  padding: 2em 1em 2em 1em;
+}
+.steps h1 {
+  margin-bottom: 1.5em;
+}
+
+.step {
+  background-color: #f6f6f6;
+  height: 4em;
+  line-height: 4em;
+  padding-left: 2em;
+  font-family: "roboto";
+  font-size: 1.1em;
+  margin: 1.5em 0 1.5em 0.7em;
+  border-radius: 20px;
+  box-shadow: 3px 7px 10px 2px #EAEAEA;
+  display: flex;
+  position: relative;
+}
+.step i {
+  color: #7e7e7e;
+  margin-right: 1em;
+  line-height: 4em;
+  width: 1em;
+  text-align: center;
+}
+.step__number {
+  background-color: #9356DC;
+  width: 1.3em;
+  height: 1.3em;
+  border-radius: 45px;
+  color: white;
+  position: absolute;
+  left: -0.7em;
+  top: 1.9em;
+  text-align: center;
+  line-height: 1.3em;
+  padding: 0.2em;
+  font-size: 0.8em;
+}
+
+.restaurants {
+  background-color: #f6f6f6;
+  padding: 2em 1em 2em 1em;
+}
+.restaurantsh1 {
+  margin-bottom: 2em;
+}
+
+.restaurant {
+  height: 15em;
+  background-color: white;
+  border-radius: 15px;
+  position: relative;
+  padding-bottom: 0.3em;
+  margin: 1em 0 1em 0;
+  box-shadow: 3px 7px 10px 2px #EAEAEA;
+}
+.restaurant__image {
+  height: 10.5em;
+  width: 100%;
+  object-fit: cover;
+  object-position: 50% 60%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.restaurant__name {
+  margin: 0.5em 0 0 0.5em;
+  font-family: "roboto-medium";
+  font-size: 1.3em;
+}
+.restaurant__location {
+  font-family: "roboto-light";
+  font-size: 1.2em;
+  margin: 0.3em 0 0 0.5em;
+}
+.restaurant__heart {
+  position: absolute;
+  right: 1.5em;
+  bottom: 2em;
+}
+
+footer {
+  background-color: #353535;
+  color: white;
+  font-family: "roboto";
+  padding: 1.5em;
+}
+footer img {
+  margin-bottom: 0.6em;
+  width: 7em;
+}
+footer .footer__text {
+  margin: 0.5em 0 0.5em 0;
+}
+footer .footer__text i {
+  color: white;
+  width: 20px;
+  margin-right: 10px;
+  text-align: center;
+}
+footer .footer__text--light {
+  font-family: "roboto-light";
+}
+
+/*# sourceMappingURL=style.css.map */
