@@ -28,6 +28,33 @@ header {
     text-align: center;
 }
 
+.logo {
+    width: 9em;
+}
 body {
     margin: 0;
+}
+
+footer {
+    background-color: $dark-grey;
+    color: white;
+    font-family: 'roboto';
+    padding: 1.5em;
+        img {
+            margin-bottom: 0.6em;
+            width: 7em;
+        }
+        .footer__text {
+            margin: 0.5em 0 0.5em 0; 
+            i {
+                color: white;
+                width: 20px;
+                margin-right: 10px;
+                text-align: center;
+                }
+            &--light {
+                font-family: 'roboto-light';
+            }
+            
+}
 }

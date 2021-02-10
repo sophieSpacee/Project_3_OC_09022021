@@ -1,0 +1,67 @@
+
+
+.cover-image-container {
+    top: 0;
+}
+
+.cover-image {
+    object-fit: cover;
+    width: 100%;
+}
+
+.menu {
+    @include section-grey;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px; 
+    position: relative;
+    margin-top: -3em;   
+}
+
+.meal__dish {
+    @include box;
+    padding: 1em;
+    &__name {
+        font-family: 'roboto';
+        font-size: 1.1em;
+        margin-bottom: 0.3em;
+    }
+    &__description {
+        font-family:'roboto-light';
+        font-size: 0.9em;
+        text-overflow: ellipsis ;
+        width: 80%;
+    }
+    &__price {  
+        position:absolute;
+        bottom: 1em;
+        right: 1.5em;
+        font-family: 'roboto';
+}
+}
+
+h3 {
+    font-family: 'shrikhand';
+    font-size: 1.5em;
+    margin: 0;
+}
+
+h4 {
+    font-family: 'roboto-thin';
+    font-size: 1.2em;
+    margin: 2em 0 0 0;
+}
+
+.green-underline {
+    background-color: $green;
+    height: 0.2em;
+    width: 3em;
+}
+
+.button-container {
+    text-align: center;
+}
+
+.button2 {
+    @include button;
+    padding: 1em 3em 1em 3em;
+}

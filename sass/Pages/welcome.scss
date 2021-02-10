@@ -24,7 +24,12 @@ h1 {
         p {
             font-family: 'roboto-thin';
         }
-}
+    }
+
+button {
+ padding: 1em 1.5em 1em 1.5em;
+ @include button;
+        }
 
 .steps {
     padding: 2em 1em 2em 1em;
@@ -71,8 +76,7 @@ h1 {
 }
 
 .restaurants {
-    background-color: $light-grey;
-    padding: 2em 1em 2em 1em;
+    @include section-grey;
         &h1 {
             margin-bottom: 2em;
         }
@@ -112,26 +116,3 @@ h1 {
     }
 }
 
-footer {
-    background-color: $dark-grey;
-    color: white;
-    font-family: 'roboto';
-    padding: 1.5em;
-        img {
-            margin-bottom: 0.6em;
-            width: 7em;
-        }
-        .footer__text {
-            margin: 0.5em 0 0.5em 0; 
-            i {
-                color: white;
-                width: 20px;
-                margin-right: 10px;
-                text-align: center;
-                }
-            &--light {
-                font-family: 'roboto-light';
-            }
-            
-}
-}
