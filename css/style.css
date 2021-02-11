@@ -1,3 +1,32 @@
+@keyframes loader-spinner {
+  0% {
+    transform: scale(0);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes loading-container {
+  0% {
+    visibility: visible;
+  }
+}
+@keyframes checked {
+  0% {
+    visibility: visible;
+    transform: scaleX(0);
+  }
+  50% {
+    visibility: visible;
+    transform: scaleX(1);
+  }
+  100% {
+    visibility: hidden;
+    transform: scaleX(0);
+  }
+}
 @font-face {
   font-family: "roboto";
   src: url("../font/Roboto/Roboto-Regular.ttf");
@@ -21,6 +50,7 @@
 header {
   padding: 1em;
   text-align: center;
+  position: relative;
 }
 
 .logo {
@@ -54,7 +84,68 @@ footer .footer__text--light {
   font-family: "roboto-light";
 }
 
-.location {
+a {
+  text-decoration: none;
+  color: black;
+}
+
+h1 {
+  font-family: "roboto-medium";
+  font-size: 1.5em;
+  margin: 0.5em 0 0.5em 0;
+}
+
+h2 {
+  font-family: "shrikhand";
+  font-size: 1.5em;
+  margin: 0;
+}
+
+h3 {
+  font-family: "roboto-thin";
+  font-size: 1.2em;
+  margin: 1.5em 0 0 0;
+}
+
+.loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  z-index: 9999;
+  background-color: white;
+  animation-duration: 3s;
+  animation-name: loading-container;
+}
+.loading__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 15em;
+  margin: 30% auto 50% auto;
+}
+.loading__spinner {
+  box-sizing: border-box;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  animation: loader-spinner 1.5s infinite ease-in-out alternate-reverse;
+  background: #99E2D0;
+  box-shadow: 3px 3px 3px #EAEAEA;
+}
+.loading__spinner--1 {
+  animation-delay: 0;
+}
+.loading__spinner--2 {
+  animation-delay: 300ms;
+}
+.loading__spinner--3 {
+  animation-delay: 600ms;
+}
+
+.intro__location {
   text-align: center;
   background-color: #EAEAEA;
   height: 3em;
@@ -63,26 +154,18 @@ footer .footer__text--light {
   color: #353535;
   box-shadow: inset 0 7px 5px -5px #cfcfcf;
 }
-.location i {
+.intro__location i {
   padding-right: 0.5em;
 }
-
-h1 {
-  font-family: "roboto-medium";
-  font-size: 1.7em;
-  margin: 0.5em 0 0.5em 0;
-}
-
-.explore {
+.intro__explore {
   text-align: center;
   padding: 2em;
   background-color: #f6f6f6;
 }
-.explore p {
+.intro__explore p {
   font-family: "roboto-thin";
 }
-
-button {
+.intro button {
   padding: 1em 1.5em 1em 1.5em;
   color: white;
   font-family: "roboto";
@@ -93,16 +176,20 @@ button {
   border-radius: 30px;
   border: none;
   margin: 1em 0 1em 0;
+  opacity: 1;
+}
+.intro button:hover {
+  opacity: 0.85;
+  box-shadow: 2px 5px 5px #6b6b6b;
 }
 
-.steps {
+.operation {
   padding: 2em 1em 2em 1em;
 }
-.steps h1 {
+.operation h1 {
   margin-bottom: 1.5em;
 }
-
-.step {
+.operation__step {
   background-color: #f6f6f6;
   height: 4em;
   line-height: 4em;
@@ -115,14 +202,17 @@ button {
   display: flex;
   position: relative;
 }
-.step i {
+.operation__step:hover {
+  background-color: #f2ebfe;
+}
+.operation__step i {
   color: #7e7e7e;
   margin-right: 1em;
   line-height: 4em;
   width: 1em;
   text-align: center;
 }
-.step__number {
+.operation__step__number {
   background-color: #9356DC;
   width: 1.3em;
   height: 1.3em;
@@ -177,12 +267,31 @@ button {
   right: 1.5em;
   bottom: 2em;
 }
-
-.cover-image-container {
-  top: 0;
+.restaurant--new {
+  background-color: #99E2D0;
+  color: #278870;
+  font-family: "roboto";
+  font-size: 0.8em;
+  width: 5.5em;
+  height: 2em;
+  line-height: 2em;
+  text-align: center;
+  border-radius: 3px;
+  position: absolute;
+  top: 1em;
+  right: 1em;
 }
 
-.cover-image {
+header i {
+  position: absolute;
+  left: 1em;
+  top: 1.1em;
+}
+
+.cover-container {
+  top: 0;
+}
+.cover-container__image {
   object-fit: cover;
   width: 100%;
 }
@@ -194,8 +303,26 @@ button {
   border-top-right-radius: 40px;
   position: relative;
   margin-top: -3em;
+  padding-bottom: 3em;
+}
+.menu__title {
+  display: flex;
+}
+.menu__title i {
+  position: absolute;
+  right: 2em;
+  top: 2.5em;
 }
 
+.green-underline {
+  background-color: #9BDBCA;
+  height: 0.2em;
+  width: 3em;
+}
+
+.meal {
+  padding-bottom: 1em;
+}
 .meal__dish {
   background-color: white;
   border-radius: 15px;
@@ -208,12 +335,20 @@ button {
   font-family: "roboto";
   font-size: 1.1em;
   margin-bottom: 0.3em;
+  width: 90%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .meal__dish__description {
   font-family: "roboto-light";
   font-size: 0.9em;
-  text-overflow: ellipsis;
   width: 80%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .meal__dish__price {
   position: absolute;
@@ -221,30 +356,35 @@ button {
   right: 1.5em;
   font-family: "roboto";
 }
-
-h3 {
-  font-family: "shrikhand";
-  font-size: 1.5em;
-  margin: 0;
+.meal__dish__checked {
+  visibility: visible;
+  background-color: #99E2D0;
+  width: 4em;
+  height: 100%;
+  transform-origin: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
-
-h4 {
-  font-family: "roboto-thin";
-  font-size: 1.2em;
-  margin: 2em 0 0 0;
+.meal__dish__checked:hover {
+  animation: checked 3s 100ms forwards ease-in-out alternate-reverse;
 }
-
-.green-underline {
-  background-color: #9BDBCA;
-  height: 0.2em;
-  width: 3em;
+.meal__dish__checked__rond {
+  height: 1.5em;
+  width: 1.5em;
+  background-color: white;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 1.5em;
+}
+.meal__dish__checked__rond i {
+  color: #99E2D0;
 }
 
 .button-container {
   text-align: center;
 }
-
-.button2 {
+.button-container .button2 {
   color: white;
   font-family: "roboto";
   box-shadow: 2px 5px 5px #EAEAEA;
@@ -254,7 +394,12 @@ h4 {
   border-radius: 30px;
   border: none;
   margin: 1em 0 1em 0;
+  opacity: 1;
   padding: 1em 3em 1em 3em;
+}
+.button-container .button2:hover {
+  opacity: 0.85;
+  box-shadow: 2px 5px 5px #6b6b6b;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -25,4 +25,16 @@
     border-radius: 30px;
     border: none;
     margin: 1em 0 1em 0;
+    opacity: 1;
+        &:hover {
+            opacity: 0.85;
+            box-shadow: 2px 5px 5px darken($color-shadow, 50);
+        }
+}
+
+@mixin overflow {
+        white-space: nowrap;
+        text-overflow: ellipsis ;
+        white-space: nowrap;
+        overflow: hidden;
 }
