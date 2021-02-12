@@ -27,66 +27,76 @@ header i {
       top: 2.5em;
     }
   }
-}
-
-.green-underline {
-  background-color: $green;
-  height: 0.2em;
-  width: 3em;
-}
-
-.meal {
-  padding-bottom: 1em;
-  &__dish {
-    @include box;
-    padding: 1em;
-    &__name {
-      font-family: "roboto";
-      font-size: 1.1em;
-      margin-bottom: 0.3em;
-      width: 90%;
-      @include overflow;
+  &__part {
+    padding-bottom: 1em;
+    &__green-underline {
+      background-color: $green;
+      height: 0.2em;
+      width: 3em;
     }
-    &__description {
-      font-family: "roboto-light";
-      font-size: 0.9em;
-      width: 80%;
-      @include overflow;
-    }
-    &__price {
-      position: absolute;
-      bottom: 1em;
-      right: 1.5em;
-      font-family: "roboto";
-      }
-      // a finir -----------------------
-    &__checked {
-      visibility: visible;
-      background-color: $color-tertiary;
-      width: 4em;
-      height: 100%;
-      transform-origin: 100%;
-      position: absolute;
-      right: 0;
-      top: 0;
-      &:hover {
-          animation: checked 3s 100ms forwards ease-in-out alternate-reverse;
-        }
-      &__rond {
-        height: 1.5em;
-        width: 1.5em;
-        background-color: white;
-        border-radius: 50%;
-        text-align: center;
-        line-height: 1.5em;
-        i {
-          color: $color-tertiary;
-        }
-      }
-    }
-    // a finir -----------------------
   }
 }
+
+.dish {
+    @include box;
+    display: flex;
+    justify-content: space-between;
+    flex-basis: auto;
+    cursor: pointer;
+    overflow: hidden;
+    &:hover {
+      &  .dish__right__checked {
+         animation: checked 1s 100ms forwards;
+      }
+      & .dish__right__checked__rond {
+        animation: rond-turn 1s 100ms forwards;
+      }
+    }
+    &__left{
+      position: relative;
+      padding: 1em 0 1em 1em;
+      @include overflow;
+      &__name {
+        font-family: "roboto";
+      font-size: 1.1em;
+      margin-bottom: 0.3em;
+      @include overflow;
+      }
+      &__description {
+        font-family: "roboto-light";
+      font-size: 0.9em;
+      @include overflow;
+      }
+    }
+    &__right {
+      display: flex;
+      &__price {
+        padding: 2.5em 1em 1em 1em;
+        font-family: "roboto";
+        transform: translateX(0);
+      }
+      &__checked {
+        background-color: $color-tertiary;
+        width: 0;
+        height: 4.7em;
+        
+        &__rond {
+          height: 1.5em;
+          width: 1.5em;
+          background-color: white;
+          border-radius: 50%;
+          text-align: center;
+          line-height: 1.5em;
+          margin: 1.6em;
+          i {
+            color: $color-tertiary;
+          }
+        }
+
+
+      }
+    }
+  }
 
 .button-container {
   text-align: center;

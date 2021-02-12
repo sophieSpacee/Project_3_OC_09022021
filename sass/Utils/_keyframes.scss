@@ -19,16 +19,21 @@
   @keyframes checked {
     
     0% {
-      visibility: visible;
-      transform: scaleX(0);
     }
-    50% {
-      visibility: visible;
-      transform: scaleX(1);
+    80% {
+        width: 4.7em;
     }
-
     100% {
-      visibility: hidden;
-      transform: scaleX(0);
+      width: 4.7em;
     }
   }
+
+  @keyframes rond-turn {
+    
+    0% {
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+ 

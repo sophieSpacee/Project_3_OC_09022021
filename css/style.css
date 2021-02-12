@@ -14,17 +14,16 @@
   }
 }
 @keyframes checked {
-  0% {
-    visibility: visible;
-    transform: scaleX(0);
-  }
-  50% {
-    visibility: visible;
-    transform: scaleX(1);
+  80% {
+    width: 4.7em;
   }
   100% {
-    visibility: hidden;
-    transform: scaleX(0);
+    width: 4.7em;
+  }
+}
+@keyframes rond-turn {
+  100% {
+    transform: rotate(360deg);
   }
 }
 @font-face {
@@ -313,71 +312,78 @@ header i {
   right: 2em;
   top: 2.5em;
 }
-
-.green-underline {
+.menu__part {
+  padding-bottom: 1em;
+}
+.menu__part__green-underline {
   background-color: #9BDBCA;
   height: 0.2em;
   width: 3em;
 }
 
-.meal {
-  padding-bottom: 1em;
-}
-.meal__dish {
+.dish {
   background-color: white;
   border-radius: 15px;
   position: relative;
   margin: 1em 0 1em 0;
   box-shadow: 3px 7px 10px 2px #EAEAEA;
-  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  flex-basis: auto;
+  cursor: pointer;
+  overflow: hidden;
 }
-.meal__dish__name {
+.dish:hover .dish__right__checked {
+  animation: checked 1s 100ms forwards;
+}
+.dish:hover .dish__right__checked__rond {
+  animation: rond-turn 1s 100ms forwards;
+}
+.dish__left {
+  position: relative;
+  padding: 1em 0 1em 1em;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.dish__left__name {
   font-family: "roboto";
   font-size: 1.1em;
   margin-bottom: 0.3em;
-  width: 90%;
   white-space: nowrap;
   text-overflow: ellipsis;
-  white-space: nowrap;
   overflow: hidden;
 }
-.meal__dish__description {
+.dish__left__description {
   font-family: "roboto-light";
   font-size: 0.9em;
-  width: 80%;
   white-space: nowrap;
   text-overflow: ellipsis;
-  white-space: nowrap;
   overflow: hidden;
 }
-.meal__dish__price {
-  position: absolute;
-  bottom: 1em;
-  right: 1.5em;
+.dish__right {
+  display: flex;
+}
+.dish__right__price {
+  padding: 2.5em 1em 1em 1em;
   font-family: "roboto";
+  transform: translateX(0);
 }
-.meal__dish__checked {
-  visibility: visible;
+.dish__right__checked {
   background-color: #99E2D0;
-  width: 4em;
-  height: 100%;
-  transform-origin: 100%;
-  position: absolute;
-  right: 0;
-  top: 0;
+  width: 0;
+  height: 4.7em;
 }
-.meal__dish__checked:hover {
-  animation: checked 3s 100ms forwards ease-in-out alternate-reverse;
-}
-.meal__dish__checked__rond {
+.dish__right__checked__rond {
   height: 1.5em;
   width: 1.5em;
   background-color: white;
   border-radius: 50%;
   text-align: center;
   line-height: 1.5em;
+  margin: 1.6em;
 }
-.meal__dish__checked__rond i {
+.dish__right__checked__rond i {
   color: #99E2D0;
 }
 
