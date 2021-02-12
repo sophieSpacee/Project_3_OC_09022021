@@ -14,11 +14,19 @@
   }
 }
 @keyframes checked {
-  80% {
+  0% {
+    transform: scaleX(0);
+  }
+  20% {
     width: 4.7em;
+    transform: scaleX(1);
+  }
+  70% {
+    width: 4.7em;
+    transform: scaleX(1);
   }
   100% {
-    width: 4.7em;
+    transform: scaleX(0);
   }
 }
 @keyframes rond-turn {
@@ -329,15 +337,15 @@ header i {
   box-shadow: 3px 7px 10px 2px #EAEAEA;
   display: flex;
   justify-content: space-between;
-  flex-basis: auto;
   cursor: pointer;
   overflow: hidden;
+  height: 4.7em;
 }
 .dish:hover .dish__right__checked {
-  animation: checked 1s 100ms forwards;
+  animation: checked 2s 100ms forwards;
 }
 .dish:hover .dish__right__checked__rond {
-  animation: rond-turn 1s 100ms forwards;
+  animation: rond-turn 1s 100ms;
 }
 .dish__left {
   position: relative;
@@ -367,12 +375,13 @@ header i {
 .dish__right__price {
   padding: 2.5em 1em 1em 1em;
   font-family: "roboto";
-  transform: translateX(0);
 }
 .dish__right__checked {
   background-color: #99E2D0;
+  transform: scaleX(0);
+  transform-origin: right;
   width: 0;
-  height: 4.7em;
+  height: 100%;
 }
 .dish__right__checked__rond {
   height: 1.5em;

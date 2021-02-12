@@ -41,17 +41,24 @@ header i {
     @include box;
     display: flex;
     justify-content: space-between;
-    flex-basis: auto;
+    // flex-basis: auto;
     cursor: pointer;
     overflow: hidden;
+    height: 4.7em;
     &:hover {
-      &  .dish__right__checked {
-         animation: checked 1s 100ms forwards;
+      & .dish__right__checked {
+        animation: checked 2s 100ms forwards;
       }
+
+      // & .dish__right__checked {
+      //   transform: translateX(0);
+      // }
+
       & .dish__right__checked__rond {
-        animation: rond-turn 1s 100ms forwards;
+        animation: rond-turn 1s 100ms ;
       }
     }
+   
     &__left{
       position: relative;
       padding: 1em 0 1em 1em;
@@ -70,16 +77,23 @@ header i {
     }
     &__right {
       display: flex;
+      
       &__price {
         padding: 2.5em 1em 1em 1em;
         font-family: "roboto";
-        transform: translateX(0);
+        // transform: translateX(0);
       }
       &__checked {
         background-color: $color-tertiary;
+        transform: scaleX(0);
+        transform-origin: right;
         width: 0;
-        height: 4.7em;
-        
+        height: 100%;
+
+        // height: 4.7em;
+        // transform: translateX(4.7em);
+        // transform-origin: right;
+        // transition: transform 1s ease-in-out ;
         &__rond {
           height: 1.5em;
           width: 1.5em;
