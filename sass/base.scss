@@ -24,13 +24,13 @@
 }
 
 header {
-    padding: 1em;
+    padding: 1em 1em 0.5em 1em;
     text-align: center;
     position: relative;
 }
 
 .logo {
-    width: 9em;
+    width: 10em;
 }
 
 body {
@@ -69,17 +69,77 @@ a {
 h1 {
     font-family: "roboto-medium";
     font-size: 1.5em;
-    margin: 0.5em 0 0.5em 0;
+    margin: 0.5em 1em 0.5em 1em;
   }
   
 h2 {
     font-family: 'shrikhand';
-    font-size: 1.5em;
+    font-size: 1.7em;
     margin: 0;
+    @include overflow;
+    max-width: 80%;
+    @include tablet {
+        margin-left: 2em;
+    }
 }
 
 h3 {
     font-family: 'roboto-thin';
-    font-size: 1.2em;
+    font-size: 1.1em;
     margin: 1.5em 0 0 0;
 }
+
+
+h4 {
+    font-size: 30px;
+    position: absolute;
+    margin: 0;
+    width: 1em;
+    height: 1em;
+    @include tablet {
+        margin-right: 2em;
+    }
+    cursor: pointer;
+    .fa {
+      position: absolute;
+      right: 0;
+      top: 0;
+      opacity: 0;
+      transition: all 200ms;
+      background: -moz-linear-gradient(
+      top,
+      $color-primary 0%,
+      $color-secondary 100%
+    );
+    background: -webkit-linear-gradient(
+      top,
+      $color-primary 0%,
+      $color-secondary 100%
+    );
+    background: linear-gradient(
+      to bottom,
+      $color-primary 0%,
+      $color-secondary 100%
+    );
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    }
+    .far {
+      position: absolute;
+      right: 0;
+      top: 0;
+      color: black;
+      opacity: 1;
+      transition: all 200ms;
+    }
+    &:hover {
+        & > .fa {
+            opacity: 1;
+        }
+        & > .far {
+            opacity: 0;
+        }
+    }
+  }

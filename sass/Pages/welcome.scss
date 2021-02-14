@@ -56,6 +56,7 @@
     background-color: $light-grey;
     p {
       font-family: "roboto-thin";
+      font-size: 1.1em;
     }
   }
   button {
@@ -69,6 +70,13 @@
   h1 {
     margin-bottom: 1.5em;
   }
+  &__steps {
+    @include tablet{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+  }
   &__step {
     background-color: $light-grey;
     height: 4em;
@@ -79,6 +87,10 @@
     margin: 1.5em 0 1.5em 0.7em;
     border-radius: 20px;
     @include box-shadow;
+    @include tablet {
+      margin: 1em ;
+      width: 15em;
+    }
     display: flex;
     position: relative;
       &:hover {
@@ -113,6 +125,14 @@
   &h1 {
     margin-bottom: 2em;
   }
+  &__container {
+    @include tablet {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      flex: 1 1 0;
+    }
+  }
 }
 
 .restaurant {
@@ -122,6 +142,10 @@
   position: relative;
   padding-bottom: 0.3em;
   margin: 1em 0 1em 0;
+  @include tablet {
+   max-width: 18em;
+    margin: 1em;
+  }
   @include box-shadow;
   &__image {
     height: 10.5em;
@@ -134,17 +158,16 @@
   &__name {
     margin: 0.5em 0 0 0.5em;
     font-family: "roboto-medium";
-    font-size: 1.3em;
+    font-size: 1.2em;
   }
   &__location {
     font-family: "roboto-light";
-    font-size: 1.2em;
+    font-size: 1.1em;
     margin: 0.3em 0 0 0.5em;
   }
-  &__heart {
-    position: absolute;
-    right: 1.5em;
-    bottom: 2em;
+  h4 {
+  right: 1em;
+  bottom: 1em;
   }
   &--new {
     background-color: $color-tertiary;

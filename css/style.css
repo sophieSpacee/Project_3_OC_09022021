@@ -34,6 +34,19 @@
     transform: rotate(360deg);
   }
 }
+@keyframes dish-appear {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 @font-face {
   font-family: "roboto";
   src: url("../font/Roboto/Roboto-Regular.ttf");
@@ -55,13 +68,13 @@
   src: url("../font/roboto/Roboto-Light.ttf");
 }
 header {
-  padding: 1em;
+  padding: 1em 1em 0.5em 1em;
   text-align: center;
   position: relative;
 }
 
 .logo {
-  width: 9em;
+  width: 10em;
 }
 
 body {
@@ -99,19 +112,70 @@ a {
 h1 {
   font-family: "roboto-medium";
   font-size: 1.5em;
-  margin: 0.5em 0 0.5em 0;
+  margin: 0.5em 1em 0.5em 1em;
 }
 
 h2 {
   font-family: "shrikhand";
-  font-size: 1.5em;
+  font-size: 1.7em;
   margin: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 80%;
+}
+@media screen and (min-width: 600px) {
+  h2 {
+    margin-left: 2em;
+  }
 }
 
 h3 {
   font-family: "roboto-thin";
-  font-size: 1.2em;
+  font-size: 1.1em;
   margin: 1.5em 0 0 0;
+}
+
+h4 {
+  font-size: 30px;
+  position: absolute;
+  margin: 0;
+  width: 1em;
+  height: 1em;
+  cursor: pointer;
+}
+@media screen and (min-width: 600px) {
+  h4 {
+    margin-right: 2em;
+  }
+}
+h4 .fa {
+  position: absolute;
+  right: 0;
+  top: 0;
+  opacity: 0;
+  transition: all 200ms;
+  background: -moz-linear-gradient(top, #9356DC 0%, #FF79DA 100%);
+  background: -webkit-linear-gradient(top, #9356DC 0%, #FF79DA 100%);
+  background: linear-gradient(to bottom, #9356DC 0%, #FF79DA 100%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+h4 .far {
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: black;
+  opacity: 1;
+  transition: all 200ms;
+}
+h4:hover > .fa {
+  opacity: 1;
+}
+h4:hover > .far {
+  opacity: 0;
 }
 
 .loading {
@@ -171,6 +235,7 @@ h3 {
 }
 .intro__explore p {
   font-family: "roboto-thin";
+  font-size: 1.1em;
 }
 .intro button {
   padding: 1em 1.5em 1em 1.5em;
@@ -196,6 +261,13 @@ h3 {
 .operation h1 {
   margin-bottom: 1.5em;
 }
+@media screen and (min-width: 600px) {
+  .operation__steps {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
 .operation__step {
   background-color: #f6f6f6;
   height: 4em;
@@ -208,6 +280,12 @@ h3 {
   box-shadow: 3px 7px 10px 2px #EAEAEA;
   display: flex;
   position: relative;
+}
+@media screen and (min-width: 600px) {
+  .operation__step {
+    margin: 1em;
+    width: 15em;
+  }
 }
 .operation__step:hover {
   background-color: #f2ebfe;
@@ -241,6 +319,14 @@ h3 {
 .restaurantsh1 {
   margin-bottom: 2em;
 }
+@media screen and (min-width: 600px) {
+  .restaurants__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex: 1 1 0;
+  }
+}
 
 .restaurant {
   height: 15em;
@@ -250,6 +336,12 @@ h3 {
   padding-bottom: 0.3em;
   margin: 1em 0 1em 0;
   box-shadow: 3px 7px 10px 2px #EAEAEA;
+}
+@media screen and (min-width: 600px) {
+  .restaurant {
+    max-width: 18em;
+    margin: 1em;
+  }
 }
 .restaurant__image {
   height: 10.5em;
@@ -262,17 +354,16 @@ h3 {
 .restaurant__name {
   margin: 0.5em 0 0 0.5em;
   font-family: "roboto-medium";
-  font-size: 1.3em;
+  font-size: 1.2em;
 }
 .restaurant__location {
   font-family: "roboto-light";
-  font-size: 1.2em;
+  font-size: 1.1em;
   margin: 0.3em 0 0 0.5em;
 }
-.restaurant__heart {
-  position: absolute;
-  right: 1.5em;
-  bottom: 2em;
+.restaurant h4 {
+  right: 1em;
+  bottom: 1em;
 }
 .restaurant--new {
   background-color: #99E2D0;
@@ -302,6 +393,11 @@ header i {
   object-fit: cover;
   width: 100%;
 }
+@media screen and (min-width: 600px) {
+  .cover-container__image {
+    height: 15em;
+  }
+}
 
 .menu {
   background-color: #f6f6f6;
@@ -315,18 +411,33 @@ header i {
 .menu__title {
   display: flex;
 }
-.menu__title i {
-  position: absolute;
-  right: 2em;
-  top: 2.5em;
+.menu__title h4 {
+  right: 1.1em;
+  top: 1.1em;
+}
+@media screen and (min-width: 600px) {
+  .menu__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
 }
 .menu__part {
   padding-bottom: 1em;
+}
+@media screen and (min-width: 600px) {
+  .menu__part {
+    margin: 0 1em 0 1em;
+  }
 }
 .menu__part__green-underline {
   background-color: #9BDBCA;
   height: 0.2em;
   width: 3em;
+}
+
+.menu__title i:before {
+  display: inline;
 }
 
 .dish {
@@ -340,6 +451,44 @@ header i {
   cursor: pointer;
   overflow: hidden;
   height: 4.7em;
+  transform: translateY(100px);
+  opacity: 0;
+  animation: dish-appear 2s ease-in-out forwards;
+}
+@media screen and (min-width: 600px) {
+  .dish {
+    width: 20em;
+  }
+}
+.dish--0 {
+  animation-delay: 0ms;
+}
+.dish--1 {
+  animation-delay: 200ms;
+}
+.dish--2 {
+  animation-delay: 400ms;
+}
+.dish--3 {
+  animation-delay: 600ms;
+}
+.dish--4 {
+  animation-delay: 800ms;
+}
+.dish--5 {
+  animation-delay: 1000ms;
+}
+.dish--6 {
+  animation-delay: 1200ms;
+}
+.dish--7 {
+  animation-delay: 1400ms;
+}
+.dish--8 {
+  animation-delay: 1600ms;
+}
+.dish--9 {
+  animation-delay: 1800ms;
 }
 .dish:hover .dish__right__checked {
   animation: checked 2s 100ms forwards;
