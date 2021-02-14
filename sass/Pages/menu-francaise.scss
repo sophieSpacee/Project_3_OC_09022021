@@ -27,6 +27,8 @@ header i {
     h4 {
       right: 1.1em;
     top: 1.1em;
+    @include tablet {
+      margin-right: 2em;
     }
   }
   &__container {
