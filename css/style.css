@@ -61,11 +61,11 @@
 }
 @font-face {
   font-family: "roboto-medium";
-  src: url("../font/roboto/Roboto-Medium.ttf");
+  src: url("../font/Roboto/Roboto-Medium.ttf");
 }
 @font-face {
   font-family: "roboto-light";
-  src: url("../font/roboto/Roboto-Light.ttf");
+  src: url("../font/Roboto/Roboto-Light.ttf");
 }
 header {
   padding: 1em 1em 0.5em 1em;
