@@ -38,12 +38,12 @@
         overflow: hidden;
 }
 
-@mixin pc {
-    @media screen and (min-width: map-get($map: $breakpoints, $key: pc )) {
-        @content;
-    }
+// @mixin pc {
+//     @media screen and (min-width: map-get($map: $breakpoints, $key: pc )) {
+//         @content;
+//     }
     
-}
+// }
 
 @mixin tablet {
     @media screen and (min-width: map-get($map: $breakpoints, $key: tablet )) {
