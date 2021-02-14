@@ -168,6 +168,9 @@
   h4 {
   right: 1em;
   bottom: 1em;
+  @include tablet {
+    margin-right: 2em;
+}
   }
   &--new {
     background-color: $color-tertiary;
