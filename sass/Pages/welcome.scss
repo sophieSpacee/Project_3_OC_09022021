@@ -36,7 +36,6 @@
   }
 }
 
-
 .intro {
   &__location {
     text-align: center;
@@ -71,7 +70,7 @@
     margin-bottom: 1.5em;
   }
   &__steps {
-    @include tablet{
+    @include tablet {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-around;
@@ -88,14 +87,14 @@
     border-radius: 20px;
     @include box-shadow;
     @include tablet {
-      margin: 1em ;
+      margin: 1em;
       width: 15em;
     }
     display: flex;
     position: relative;
-      &:hover {
-        background-color: $light-color-primary;
-      }
+    &:hover {
+      background-color: $light-color-primary;
+    }
     i {
       color: $medium-grey;
       margin-right: 1em;
@@ -143,7 +142,7 @@
   padding-bottom: 0.3em;
   margin: 1em 0 1em 0;
   @include tablet {
-   max-width: 18em;
+    max-width: 18em;
     margin: 1em;
   }
   @include box-shadow;
@@ -166,15 +165,14 @@
     margin: 0.3em 0 0 0.5em;
   }
   h4 {
-  right: 1em;
-  bottom: 1em;
- 
-}
+    right: 1em;
+    bottom: 1em;
   }
+
   &--new {
     background-color: $color-tertiary;
     color: darken($color-tertiary, 40);
-    font-family: 'roboto';
+    font-family: "roboto";
     font-size: 0.8em;
     width: 5.5em;
     height: 2em;
