@@ -14,6 +14,22 @@
     0% {
         visibility: visible;
     }
+ 
+    100% {
+      visibility: hidden;
+    }
+  }
+
+  @keyframes loading {
+      
+    0% {
+        opacity: 0,8;
+    }
+    
+    100% {
+      opacity: 0;
+      visibility: hidden;
+    }
   }
 
   @keyframes checked {

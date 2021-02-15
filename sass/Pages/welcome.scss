@@ -1,39 +1,43 @@
 .loading {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  visibility: hidden;
-  z-index: 9999;
   background-color: white;
-  animation-duration: 3s;
-  animation-name: loading-container;
+  opacity: 0,8;
+  height: 100%;
+  width: 100%;
+  z-index: 9998;
+  animation: loading 5s forwards cubic-bezier(1,.02,1,.04);
   &__container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    width: 15em;
-    margin: 30% auto 50% auto;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  animation: loading-container 5s forwards cubic-bezier(1,.02,1,.04);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 15em;
   }
   &__spinner {
     box-sizing: border-box;
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    animation: loader-spinner 1.5s infinite ease-in-out alternate-reverse;
+    animation: loader-spinner 1s infinite ease-in-out alternate-reverse;
     background: $color-tertiary;
     box-shadow: 3px 3px 3px $color-shadow;
     &--1 {
-      animation-delay: 0;
+      animation-delay: 1ms;
     }
     &--2 {
       animation-delay: 300ms;
     }
     &--3 {
       animation-delay: 600ms;
-    }
+    
   }
+  }
+  
 }
 
 .intro {
@@ -164,7 +168,7 @@
     font-size: 1.1em;
     margin: 0.3em 0 0 0.5em;
   }
-  h4 {
+  .heart {
     right: 1em;
     bottom: 1em;
   }

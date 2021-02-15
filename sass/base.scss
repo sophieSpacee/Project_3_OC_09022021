@@ -88,19 +88,19 @@ h3 {
   margin: 1.5em 0 0 0;
 }
 
-h4 {
+.heart {
   font-size: 30px;
   position: absolute;
   margin: 0;
   width: 1em;
   height: 1em;
   cursor: pointer;
-  .fa {
+  .heart-color {
     position: absolute;
     right: 0;
     top: 0;
     opacity: 0;
-    transition: all 200ms;
+    transition: all 300ms;
     background: -moz-linear-gradient(
       top,
       $color-primary 0%,
@@ -121,19 +121,19 @@ h4 {
     background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-  .far {
+  .heart-empty {
     position: absolute;
     right: 0;
     top: 0;
     color: black;
     opacity: 1;
-    transition: all 200ms;
+    transition: all 300ms;
   }
   &:hover {
-    & > .fa {
+    & > .heart-color {
       opacity: 1;
     }
-    & > .far {
+    & > .heart-empty {
       opacity: 0;
     }
   }
