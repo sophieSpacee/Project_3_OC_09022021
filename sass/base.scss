@@ -15,12 +15,12 @@
 
 @font-face {
   font-family: "roboto-medium";
-  src: url("../font/roboto/Roboto-Medium.ttf");
+  src: url("../font/Roboto/Roboto-Medium.ttf");
 }
 
 @font-face {
   font-family: "roboto-light";
-  src: url("../font/roboto/Roboto-Light.ttf");
+  src: url("../font/Roboto/Roboto-Light.ttf");
 }
 
 header {
@@ -118,7 +118,7 @@ h3 {
     );
     -webkit-background-clip: text;
     -moz-background-clip: text;
-    background-clip: text;
+    // background-clip: text;
     -webkit-text-fill-color: transparent;
   }
   .heart-empty {
