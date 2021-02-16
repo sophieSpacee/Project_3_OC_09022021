@@ -93,18 +93,22 @@
     @include tablet {
       margin: 1em;
       width: 15em;
+      box-shadow: none;
     }
     display: flex;
     position: relative;
-    &:hover {
-      background-color: $light-color-primary;
-    }
     i {
       color: $medium-grey;
       margin-right: 1em;
       line-height: 4em;
       width: 1em;
       text-align: center;
+    }
+    &--darker {
+      background-color: lighten($color-primary, 36.2%);
+      i {
+        color: $color-primary;
+      }
     }
     &__number {
       background-color: $color-primary;

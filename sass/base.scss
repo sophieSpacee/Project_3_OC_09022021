@@ -37,11 +37,19 @@ body {
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 footer {
   background-color: $dark-grey;
   color: white;
   font-family: "roboto";
   padding: 1.5em;
+  @include tablet {
+    text-align: center;
+  }
   img {
     margin-bottom: 0.6em;
     width: 7em;
@@ -56,19 +64,18 @@ footer {
     }
     &--light {
       font-family: "roboto-light";
+      color: white;
     }
+    
   }
 }
 
-a {
-  text-decoration: none;
-  color: black;
-}
+
 
 h1 {
   font-family: "roboto-medium";
   font-size: 1.5em;
-  margin: 0.5em 1em 0.5em 1em;
+  margin: 0.5em 1em 0.5em 0;
 }
 
 h2 {

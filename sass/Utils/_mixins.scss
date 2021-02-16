@@ -34,18 +34,15 @@
         }
 }
 
+@mixin transition-1s {
+    transition: all 1s;
+}
+
 @mixin overflow {
         white-space: nowrap;
         text-overflow: ellipsis ;
         overflow: hidden;
 }
-
-// @mixin pc {
-//     @media screen and (min-width: map-get($map: $breakpoints, $key: pc )) {
-//         @content;
-//     }
-    
-// }
 
 @mixin tablet {
     @media screen and (min-width: map-get($map: $breakpoints, $key: tablet )) {

@@ -5,7 +5,6 @@ header i {
 }
 
 .cover-container {
-  top: 0;
   &__image {
     object-fit: cover;
     width: 100%;
@@ -26,10 +25,10 @@ header i {
     display: flex;
     .heart {
       right: 1.1em;
-    top: 1.1em;
-    }
-    @include tablet {
-      margin-right: 2em;
+      top: 1.1em;
+      @include tablet {
+        margin-right: 2em;
+      }
     }
   }
   &__container {
@@ -52,22 +51,17 @@ header i {
   }
 }
 
-
-.menu__title i:before {
-  display: inline;
-}
-
 .dish {
   @include box;
   @include tablet {
-    width: 20em;
+    width: 25em;
   }
   display: flex;
   justify-content: space-between;
   cursor: pointer;
   overflow: hidden;
   height: 4.7em;
-  transform: translateY(100px);
+  // transform: translateY(100px);
   opacity: 0;
   animation: dish-appear 2s ease-in-out forwards;
   @for $dish from 0 to 10 {
@@ -76,19 +70,27 @@ header i {
     }
   }
   &:hover {
-    & .dish__right__checked {
-      animation: checked 2s 100ms forwards;
+    // On click animation for second version
+    // & .dish__right__checked {
+    //   // animation: checked 2s 100ms forwards;
+    // }
+    & .dish__right {
+      transform: translateX(0.1em);
     }
-
     & .dish__right__checked__rond {
       animation: rond-turn 1s 100ms;
+    }
+    & .dish__left {
+      width: calc(100% - 9.2em);
     }
   }
 
   &__left {
-    position: relative;
+    // position: relative;
     padding: 1em 0 1em 1em;
     @include overflow;
+    width: calc(100% - 4.5em);
+    @include transition-1s;
     &__name {
       font-family: "roboto";
       font-size: 1.1em;
@@ -103,23 +105,20 @@ header i {
   }
   &__right {
     display: flex;
+    transform: translateX(4.8em);
+    transform-origin: right;
+    @include transition-1s;
+    position: absolute;
+    right: 0;
 
     &__price {
       padding: 2.5em 1em 1em 1em;
       font-family: "roboto";
-      // transform: translateX(0);
     }
     &__checked {
       background-color: $color-tertiary;
-      transform: scaleX(0);
-      transform-origin: right;
-      width: 0;
-      height: 100%;
-
-      // height: 4.7em;
-      // transform: translateX(4.7em);
-      // transform-origin: right;
-      // transition: transform 1s ease-in-out ;
+      height: 5em;
+      width: 4.7em;
       &__rond {
         height: 1.5em;
         width: 1.5em;
