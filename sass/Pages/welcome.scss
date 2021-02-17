@@ -101,6 +101,9 @@
     }
     display: flex;
     position: relative;
+    &__description {
+      @include overflow
+    }
     &__number {
       background-color: $color-primary;
       width: 1.3em;

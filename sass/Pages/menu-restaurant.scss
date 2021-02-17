@@ -91,7 +91,7 @@ header i {
       transform: translateX(0.1em);
     }
     & .dish__right__checked__rond {
-      animation: rond-turn 1s 100ms;
+      animation: rond-turn 500ms 100ms;
     }
     & .dish__left {
       width: calc(100% - 9.2em);
@@ -104,7 +104,7 @@ header i {
     width: calc(100% - 4.5em);
     @include transition-1s;
     &__name {
-      font-family: "roboto";
+      font-family: "roboto-medium";
       font-size: 1.1em;
       margin: 0 0 0.3em 0;
       @include overflow;
