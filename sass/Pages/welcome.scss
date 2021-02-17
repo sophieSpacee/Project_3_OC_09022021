@@ -1,22 +1,22 @@
 .loading {
   position: fixed;
   background-color: white;
-  opacity: 0,8;
+  opacity: 0, 8;
   height: 100%;
   width: 100%;
   z-index: 9998;
-  animation: loading 5s forwards cubic-bezier(1,.02,1,.04);
+  animation: loading 5s forwards cubic-bezier(1, 0.02, 1, 0.04);
   &__container {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 9999;
-  animation: loading-container 5s forwards cubic-bezier(1,.02,1,.04);
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  width: 15em;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    animation: loading-container 5s forwards cubic-bezier(1, 0.02, 1, 0.04);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 15em;
   }
   &__spinner {
     box-sizing: border-box;
@@ -25,7 +25,7 @@
     border-radius: 50%;
     animation: loader-spinner 1s infinite ease-in-out alternate-reverse;
     background: $color-tertiary;
-    box-shadow: 3px 3px 3px $color-shadow;
+    box-shadow: 3px 3px 3px $medium-grey;
     &--1 {
       animation-delay: 1ms;
     }
@@ -34,16 +34,21 @@
     }
     &--3 {
       animation-delay: 600ms;
-    
+    }
   }
-  }
-  
 }
 
+.h1-welcome {
+  font-family: "roboto-medium";
+  font-size: 1.5em;
+  @include tablet {
+    text-align: center;
+  }
+}
 .intro {
   &__location {
     text-align: center;
-    background-color: $color-shadow;
+    background-color: $medium-grey;
     height: 3em;
     font-family: "roboto";
     line-height: 3em;
@@ -55,11 +60,10 @@
   }
   &__explore {
     text-align: center;
-    padding: 2em;
+    padding: 2.5em 2em 2.5em 2em;
     background-color: $light-grey;
-    p {
-      font-family: "roboto-thin";
-      font-size: 1.1em;
+    &__title {
+      margin: 0 1em 0.5em 1em;
     }
   }
   button {
@@ -70,7 +74,7 @@
 
 .operation {
   padding: 2em 1em 2em 1em;
-  h1 {
+  &__title {
     margin-bottom: 1.5em;
   }
   &__steps {
@@ -97,19 +101,6 @@
     }
     display: flex;
     position: relative;
-    i {
-      color: $medium-grey;
-      margin-right: 1em;
-      line-height: 4em;
-      width: 1em;
-      text-align: center;
-    }
-    &--darker {
-      background-color: lighten($color-primary, 36.2%);
-      i {
-        color: $color-primary;
-      }
-    }
     &__number {
       background-color: $color-primary;
       width: 1.3em;
@@ -124,14 +115,24 @@
       padding: 0.2em;
       font-size: 0.8em;
     }
+    i {
+      color: $icon-grey;
+      margin-right: 1em;
+      line-height: 4em;
+      width: 1em;
+      text-align: center;
+    }
+    &--darker {
+      background-color: lighten($color-primary, 36.2%);
+      i {
+        color: $color-primary;
+      }
+    }
   }
 }
 
 .restaurants {
   @include section-grey;
-  &h1 {
-    margin-bottom: 2em;
-  }
   &__container {
     @include tablet {
       display: flex;
@@ -143,11 +144,10 @@
 }
 
 .restaurant {
-  height: 15em;
+  height: 15.5em;
   background-color: white;
   border-radius: 15px;
   position: relative;
-  padding-bottom: 0.3em;
   margin: 1em 0 1em 0;
   @include tablet {
     width: 18em;
@@ -158,19 +158,16 @@
     height: 10.5em;
     width: 100%;
     object-fit: cover;
-    object-position: 50% 60%;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
   }
+  &__text {
+    padding: 0.8em;
+  }
   &__name {
-    margin: 0.5em 0 0 0.5em;
+    margin: 0 0 0.3em 0;
     font-family: "roboto-medium";
     font-size: 1.2em;
-  }
-  &__location {
-    font-family: "roboto-light";
-    font-size: 1.1em;
-    margin: 0.3em 0 0 0.5em;
   }
   .heart {
     right: 1em;

@@ -1,52 +1,43 @@
 @mixin box-shadow {
-    box-shadow: 3px 7px 10px 2px $color-shadow;
-}
-
-@mixin box {
-    background-color: white;
-    border-radius: 15px;
-    position: relative;
-    margin: 1em 0 1em 0;
-    box-shadow: 3px 7px 10px 2px $color-shadow;
+  box-shadow: 3px 7px 10px 2px $medium-grey;
 }
 
 @mixin section-grey {
-    background-color: $light-grey;
-    padding: 2em 1em 2em 1em;
+  background-color: $light-grey;
+  padding: 2em 1em 3em 1em;
 }
 
 @mixin button {
-    color: white;
-    font-family: "roboto";
-    box-shadow: 2px 5px 5px $color-shadow;
-    text-align: center;
-    font-size: 1.1em;
-    background: linear-gradient($color-secondary, $color-primary);
-    border-radius: 30px;
-    border: none;
-    margin: 1em 0 1em 0;
-    opacity: 1;
-    cursor: pointer;
-    outline: none;
-        &:hover {
-            opacity: 0.85;
-            box-shadow: 2px 5px 5px darken($color-shadow, 50);
-        }
+  color: white;
+  font-family: "roboto";
+  box-shadow: 2px 5px 5px $medium-grey;
+  text-align: center;
+  font-size: 1.1em;
+  background: linear-gradient($color-secondary, $color-primary);
+  border-radius: 30px;
+  border: none;
+  margin: 2em 0 2em 0;
+  opacity: 1;
+  cursor: pointer;
+  outline: none;
+  &:hover {
+    opacity: 0.85;
+    box-shadow: 2px 5px 5px darken($medium-grey, 50);
+  }
 }
 
 @mixin transition-1s {
-    transition: all 1s;
+  transition: all 1s;
 }
 
 @mixin overflow {
-        white-space: nowrap;
-        text-overflow: ellipsis ;
-        overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 @mixin tablet {
-    @media screen and (min-width: map-get($map: $breakpoints, $key: tablet )) {
-        @content;
-    }
-    
+  @media screen and (min-width: map-get($map: $breakpoints, $key: tablet )) {
+    @content;
+  }
 }

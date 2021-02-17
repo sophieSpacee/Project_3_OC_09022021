@@ -35,8 +35,8 @@
     </div>
 
     <section class="menu">
-      <div class="menu__title">
-        <h2>La palette du goût</h2>
+      <div class="menu__top">
+        <h1 class="menu__top__title">La palette du goût</h1>
         <div class="heart">
           <span class="heart-color"> <i class="fa fa-heart" aria-hidden="true"></i></span>
           <span class="heart-empty">  <i class="far fa-heart" aria-hidden="true"></i></span>
@@ -46,13 +46,13 @@
 
       <div class="menu__container">
         <div class="menu__part">
-          <h3>ENTRÉES</h3>
+          <h2 class="menu__part__course">ENTRÉES</h2>
           <div class="menu__part__green-underline"></div>
   
           <div class="dish dish--0">
             <div class="dish__left">
-              <div class="dish__left__name">Fricassée d'escargot</div>
-              <div class="dish__left__description">Au piment d'Espelette </div>
+              <h3 class="dish__left__name">Fricassée d'escargot</h3>
+              <span class="dish__left__description">Au piment d'Espelette </span>
             </div>
             <div class="dish__right">
               <div class="dish__right__price">25€</div>
@@ -66,10 +66,10 @@
   
           <div class="dish dish--1">
             <div class="dish__left">
-              <div class="dish__left__name">Foie gras de canard mi-cuit</div>
-              <div class="dish__left__description">
+              <h3 class="dish__left__name">Foie gras de canard mi-cuit</h3>
+              <span class="dish__left__description">
                 Et ses copeaux de truffe noire
-              </div>
+              </span>
             </div>
             <div class="dish__right">
               <div class="dish__right__price">35€</div>
@@ -83,8 +83,8 @@
   
           <div class="dish dish--2">
             <div class="dish__left">
-              <div class="dish__left__name">Oeuf au plat</div>
-              <div class="dish__left__description">Assaisonné à la truffe sur lit de caviar</div>
+              <h3 class="dish__left__name">Oeuf au plat</h3>
+              <span class="dish__left__description">Assaisonné à la truffe sur lit de caviar</span>
             </div>
             <div class="dish__right">
               <div class="dish__right__price">20€</div>
@@ -98,15 +98,15 @@
         </div>
   
         <div class="menu__part">
-          <h3>PLATS</h3>
+          <h2 class="menu__part__course">PLATS</h2>
           <div class="menu__part__green-underline"></div>
   
           <div class="dish dish--3">
             <div class="dish__left">
-              <div class="dish__left__name">Filet de boeuf aux herbes</div>
-              <div class="dish__left__description">
+              <h3 class="dish__left__name">Filet de boeuf aux herbes</h3>
+              <span class="dish__left__description">
                 Accompagné de sa ribambelle de légumes
-              </div>
+              </span>
             </div>
             <div class="dish__right">
               <div class="dish__right__price">40€</div>
@@ -120,10 +120,10 @@
   
           <div class="dish dish--4">
             <div class="dish__left">
-              <div class="dish__left__name">Parmentier de queue de boeuf</div>
-              <div class="dish__left__description">
+              <h3 class="dish__left__name">Parmentier de queue de boeuf</h3>
+              <span class="dish__left__description">
                 À la truffe noire sur sa purée de panais
-              </div>
+              </span>
             </div>
             <div class="dish__right">
               <div class="dish__right__price">35€</div>
@@ -137,10 +137,10 @@
   
           <div class="dish dish--5">
             <div class="dish__left">
-              <div class="dish__left__name">Filet de turbot</div>
-              <div class="dish__left__description">
+              <h3 class="dish__left__name">Filet de turbot</h3>
+              <span class="dish__left__description">
                 Aux agrumes
-              </div>
+              </span>
             </div>
             <div class="dish__right">
               <div class="dish__right__price">44€</div>
@@ -153,13 +153,13 @@
           </div>
         </div>
         <div class="menu__part">
-          <h3>DESSERTS</h3>
+          <h2 class="menu__part__course">DESSERTS</h2>
           <div class="menu__part__green-underline"></div>
   
           <div class="dish dish--6">
             <div class="dish__left">
-              <div class="dish__left__name">Paris-Brest</div>
-              <div class="dish__left__description">Revisité</div>
+              <h3 class="dish__left__name">Paris-Brest</h3>
+              <span class="dish__left__description">Revisité</span>
             </div>
             <div class="dish__right">
               <div class="dish__right__price">18€</div>
@@ -173,8 +173,8 @@
   
           <div class="dish dish--7">
             <div class="dish__left">
-              <div class="dish__left__name">Macaron au chocolat d'exception </div>
-              <div class="dish__left__description">Et glace à la vanille de Madagascar</div>
+              <h3 class="dish__left__name">Macaron au chocolat d'exception </h3>
+              <span class="dish__left__description">Et glace à la vanille de Madagascar</span>
             </div>
             <div class="dish__right">
               <div class="dish__right__price">22€</div>
@@ -188,10 +188,10 @@
   
           <div class="dish dish--8">
             <div class="dish__left">
-              <div class="dish__left__name">Mousse au chocolat</div>
-              <div class="dish__left__description">
+              <h3 class="dish__left__name">Mousse au chocolat</h3>
+              <span class="dish__left__description">
                 Au piment d'Espelette et à la truffe noire
-              </div>
+              </span>
             </div>
             <div class="dish__right">
               <div class="dish__right__price">23€</div>
@@ -216,14 +216,25 @@
       <img src="../images/logo/ohmyfood-white.svg" alt="logo ohmyfood-white" />
       <div class="footer__text">
         <i class="fas fa-utensils"></i>
-        Proposer un restaurant
+        <span>Proposer un restaurant</span>
+        
       </div>
       <div class="footer__text">
         <i class="fas fa-hands-helping fa-sm"></i>
-        Devenir partenaire
+        <span>Devenir partenaire</span>
+        
       </div>
-      <div class="footer__text footer__text--light">Mentions légales</div>
-      <a class="footer__text footer__text--light" href="mailto:contact@ohmyfood.com">Contact</a>  
+      <div class="footer__text footer__text--light">
+        <span>Mentions légales</span>
+        </div>
+      <a
+        class="footer__text footer__text--light"
+        href="mailto:contact@ohmyfood.com"
+        >
+        <span>Contact</span>
+        
+        </a
+      >
     </footer>
   </body>
 </html>
