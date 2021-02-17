@@ -10,7 +10,7 @@
 @mixin button {
   color: white;
   font-family: "roboto";
-  box-shadow: 2px 5px 5px $medium-grey;
+  box-shadow: 2px 5px 5px $button-shadow;
   text-align: center;
   font-size: 1.1em;
   background: linear-gradient($color-secondary, $color-primary);
@@ -20,9 +20,10 @@
   opacity: 1;
   cursor: pointer;
   outline: none;
+  transition: all 300ms;
   &:hover {
-    opacity: 0.85;
-    box-shadow: 2px 5px 5px darken($medium-grey, 50);
+    opacity: 0.9;
+    box-shadow: 2px 5px 5px darken($button-shadow, 20);
   }
 }
 

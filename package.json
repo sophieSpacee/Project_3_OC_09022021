@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "sass": "sass --watch ./sass/main.scss:./css/style.css --style compressed",
-    "prefix": "postcss ./css/style.css --use autoprefixer -d ./css/prefixed/"
+    "prefix": "postcss ./css/style.css --use autoprefixer -d ./css/"
   },
   "repository": {
     "type": "git",
@@ -17,5 +17,11 @@
   "bugs": {
     "url": "https://github.com/sophieSpacee/SophieGauthier_3_09022021/issues"
   },
-  "homepage": "https://github.com/sophieSpacee/SophieGauthier_3_09022021#readme"
+  "homepage": "https://github.com/sophieSpacee/SophieGauthier_3_09022021#readme",
+  "dependencies": {
+    "autoprefixer": "^10.2.4",
+    "postcss": "^8.2.6",
+    "postcss-cli": "^8.3.1",
+    "sass": "^1.32.7"
+  }
 }

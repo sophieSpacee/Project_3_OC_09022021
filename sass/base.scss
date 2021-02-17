@@ -1,26 +1,26 @@
 @font-face {
   font-family: "roboto";
-  src: url("../font/Roboto/Roboto-Regular.ttf");
+  src: url("../fonts/Roboto/Roboto-Regular.ttf");
 }
 
 @font-face {
   font-family: "roboto-thin";
-  src: url("../font/Roboto/Roboto-Thin.ttf");
+  src: url("../fonts/Roboto/Roboto-Thin.ttf");
 }
 
 @font-face {
   font-family: "shrikhand";
-  src: url("../font/Shrikhand/Shrikhand-Regular.ttf");
+  src: url("../fonts/Shrikhand/Shrikhand-Regular.ttf");
 }
 
 @font-face {
   font-family: "roboto-medium";
-  src: url("../font/Roboto/Roboto-Medium.ttf");
+  src: url("../fonts/Roboto/Roboto-Medium.ttf");
 }
 
 @font-face {
   font-family: "roboto-light";
-  src: url("../font/Roboto/Roboto-Light.ttf");
+  src: url("../fonts/Roboto/Roboto-Light.ttf");
 }
 
 header {
@@ -48,7 +48,7 @@ footer {
   font-family: "roboto";
   padding: 1.5em;
   @include tablet {
-    text-align: center;
+    padding-left: 4em;
   }
   img {
     margin-bottom: 0.6em;
