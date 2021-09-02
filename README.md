@@ -1,4 +1,4 @@
-# SophieGauthier_3_09022021
+# Oh My Food -  Projet 3 of Web Developper course with OpenClassrooms
 Projet 3 - OpenClassrooms - ohmyfood
 
 ## Project goals
